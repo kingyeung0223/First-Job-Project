@@ -39,14 +39,14 @@ def main():
                        'user': 'webaccess',
                        'pw': 'webaccess'}
 
-    #sql_statement = """
-     #               update dbo.video
-      #              set [video_description] = v.[video_description] + char(13) + char(13) + N'拍攝日期: ' + replace(CONVERT(VARCHAR(10), v.ShootDate, 111), '/', '-') + char(13) + N'廣告日期: ' + replace(CONVERT(VARCHAR(10), m.video_date, 111), '/', '-'),
-	   #                 [video_title] = [video_title] + ' (' + N'物業編號: ' + '{adv_num}' + ')'
-        #            from dbo.video v
-         #           join dbo.menu m on v.menu_ID = m.menu_ID
-          #          where v.type = 0 and v.code <> '' and v.video_ID = '{vdo_id}'
-    #"""
+    sql_statement = """
+                    update dbo.video
+                    set [video_description] = v.[video_description] + char(13) + char(13) + N'拍攝日期: ' + replace(CONVERT(VARCHAR(10), v.ShootDate, 111), '/', '-') + char(13) + N'廣告日期: ' + replace(CONVERT(VARCHAR(10), m.video_date, 111), '/', '-'),
+	                    [video_title] = [video_title] + ' (' + N'物業編號: ' + '{adv_num}' + ')'
+                    from dbo.video v
+                    join dbo.menu m on v.menu_ID = m.menu_ID
+                    where v.type = 0 and v.code <> '' and v.video_ID = '{vdo_id}'
+    """
 
     sql_statement = "select top 100 * from dbo.video"
 
