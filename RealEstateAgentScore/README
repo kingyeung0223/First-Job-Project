@@ -1,0 +1,8 @@
+"main.py" is the main python script. 
+This main program is designed to be execute with window task scheduler to update information across databases regularly.
+
+The purpose of this python program is to retrieve some information of real estate from a mssql server and then join with real estates that are currently advertised in another mssql server.
+The resulting information then have to be exported to another database for scoring performance of different real-estate agents
+
+"pyodbc_sql_function" is a user-defined modules to facilitate the import of data from mssql database to python environment and the export of data from python enviroment back to mssql database.
+This module make good use of some existing python libraries including "pandas", "sqlalchemy", "pyodbc", "typing"
