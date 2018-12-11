@@ -1,3 +1,6 @@
 This python program is designed for updating each video's description stored in the database based on the Regulatory Authority Requirement. 
 
 The detail of update is stored in an excel file. Date have to be read from the excel file first. Finally update operation would be performed to the database
+
+"pyodbc_sql_function" is a user-defined module to facilitate the import of data from mssql database to python environment and the export of data from python enviroment back to mssql database.
+This module makes good use of some existing python libraries including "pandas", "sqlalchemy", "pyodbc", "typing"
