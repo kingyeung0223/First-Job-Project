@@ -6,3 +6,9 @@ The resulting information then have to be exported to another database for scori
 
 "pyodbc_sql_function" is a user-defined modules to facilitate the import of data from mssql database to python environment and the export of data from python enviroment back to mssql database.
 This module make good use of some existing python libraries including "pandas", "sqlalchemy", "pyodbc", "typing"
+
+
+
+
+
+
