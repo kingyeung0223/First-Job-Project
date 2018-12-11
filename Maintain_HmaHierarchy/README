@@ -1,1 +1,15 @@
-asdfsd
+"main.py" is the main python script. 
+This main program is designed to be executed with window task scheduler to update information across databases regularly.
+
+The purpose of this program is to form a hierarchy based on geographical location of different real-estates.
+The structure of the hierarchy would be as follow: unit --> building --> estate --> hma --> district --> territory
+
+For this purpose, this program has to ensure each subsidary in the hierarchy belongs to only a single superior level.
+If data from data source violate this rule, a notification email would be sent to the database adminstrator.
+
+
+"pyodbc_sql_function" is a user-defined module to facilitate the import of data from mssql database to python environment and the export of data from python enviroment back to mssql database.
+This module makes good use of some existing python libraries including "pandas", "sqlalchemy", "pyodbc", "typing"
+
+"send_email_function" is another user-defined module to facilitate drafting and sending email with attachment to different people in python environment.
+This module makes good use of build-in library inlcuding "smtplib" and "email".
