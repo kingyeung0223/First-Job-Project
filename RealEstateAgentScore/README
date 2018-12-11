@@ -1,5 +1,5 @@
 "main.py" is the main python script. 
-This main program is designed to be execute with window task scheduler to update information across databases regularly.
+This main program is designed to be executed with window task scheduler to update information across databases regularly.
 
 The purpose of this python program is to retrieve some information of real estate from a mssql server and then join with real estates that are currently advertised in another mssql server.
 The resulting information then have to be exported to another database for scoring performance of different real-estate agents
