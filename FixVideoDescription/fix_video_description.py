@@ -34,10 +34,10 @@ def UpdateVideoByDF(con_dict: Dict[str, str], df: str, sql_statement: str) -> No
 def main():
     # Setting Global Variable
     con_dict_dest = {'driver': 'SQL Server Native Client 11.0',
-                       'server': '59.152.202.130',
-                       'db': 'CPN',
-                       'user': 'webaccess',
-                       'pw': 'webaccess'}
+                       'server': 'destination_server',
+                       'db': 'destination_db',
+                       'user': 'user',
+                       'pw': 'user'}
 
     sql_statement = """
                     update dbo.video
