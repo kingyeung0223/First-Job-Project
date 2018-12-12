@@ -1,7 +1,7 @@
 This is an excel report built with excel power query together with pivot table. 
 
-It is designed to reflect the advertising situtation for real estates in different districts through measurement 
-like total number of advertisements, hit rate of advertisement.
+It is designed to reflect the weekly advertising situtation for real estates in different districts through measurement 
+like total number of advertisements, hit rate of advertisement. Data in workbooks could be updated easily by a simple refresh.
 
 This excel demonstrates:
 1. how data should be imported and formulated by power query from databases, 
