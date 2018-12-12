@@ -1,0 +1,9 @@
+This is an excel report built with excel power query together with pivot table. 
+
+It is designed to reflect the advertising situtation for real estates in different districts through measurement 
+like total number of advertisements, hit rate of advertisement.
+
+This excel demonstrates:
+1. how data should be imported and formulated by power query from databases, 
+2. how pivot table should be set up to compare performance metrics weekly 
+3. how slicer could be adopted in pivot table to provide interactive experience to user
