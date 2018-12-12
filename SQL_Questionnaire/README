@@ -1,1 +1,64 @@
-fjsdkljfl
+The main focus of this project is develop a store procedure that could retrieve and transform results of a questionnaire given that feedback of this questionnaire is stored in a json column in a mssql database.
+
+sp_GenSurveyRawDataSet.sql is the definition the store procedure for achieving the above goal.
+This store procedure demonstrates the techniques of:
+1) query with json in mssql 
+2) combining dynamic query with pivot to achieve "using pivot in mssql without no hardcoding any column names"
+3) cursor
+4) query with sys tables
+5) using "for xml" to achieve "concatenate rows which are in char type after group by" 
+6) using table-valued function & scalar-valued function
+7) using table-value parameter with stored procedures
+
+user_defined_function.sql contains definition of:
+1) GetOpenEndAnswer (a user-defined table-valued function)
+2) GetMC_AnswerAsUnpivotTrueFalseMatrix (a user-defined table-valued function)
+3) RemoveBadStringInMC_Choice (a user-defined scalar-valued function)
+
+user_defined_function.sql contains definition of:
+1) GetOpenEndAnswer (a user-defined table-valued function)
+2) GetMC_AnswerAsUnpivotTrueFalseMatrix (a user-defined table-valued function)
+3) RemoveBadStringInMC_Choice (a user-defined scalar-valued function)
+
+questionnaire_sample.txt is a sample of feedback from a single respondent.
+
+
+
+
+The targeted output format is as follow:
+Respondent  q2_非常有幫助  q2_有幫助  q2_沒有幫助   q2_完全沒有幫助
+1           0             0          1            0
+
+
+The associated database-schema and json-schem are as follow:
+
+DB_SCHEMA
+Id      SurveyId                                    CreateDate      AnswereJS
+1       BB5B1A93-3B0A-47A5-92AE-016828A6F691        1990-01-01      <json document>
+2       BB5B1A93-3B0A-47A5-92AE-016828A6F691        1990-01-01      <json document>
+
+JSON_SCHEMA
+{
+   "q2":[
+      {
+         "value":"非常有幫助",
+         "selected":false
+      },
+      {
+         "value":"有幫助",
+         "selected":false
+      },
+      {
+         "value":"沒有幫助",
+         "selected":false
+      },
+      {
+         "value":"完全沒有幫助",
+         "selected":false
+      },
+      {
+         "value":"不知道",
+         "selected":true
+      }
+   ]
+  }
